@@ -1,0 +1,31 @@
+.header {
+  margin-top: 8.4rem;
+  height: 35.2rem;
+  position: relative;
+
+  &-bcg {
+    object-fit: cover;
+    height: 35.2rem;
+    width: 100%;
+  }
+
+  &-container {
+    width: clamp(35.2rem, 100%, 100rem);
+    @include centerHV;
+    height: inherit;
+
+    &-text {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-59.5%);
+      font-size: 4.2rem;
+      font-family: "TbcFont4";
+      line-height: 1.6;
+
+      span {
+        font-size: 3.4rem;
+      }
+    }
+  }
+}
