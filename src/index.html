@@ -18,17 +18,76 @@
   </head>
   <body>
     <!-- header -->
-    <header></header>
+    <header class="header">
+      <img
+        class="header-bcg"
+        alt="people in a meeting"
+        src="/src/assets/images/bcg-big.jpg"
+      />
+      <div class="header-container">
+        <h1 class="header-container-text">
+          TBC x USAID
+          <br />
+          <span> ᲢᲔᲥᲜᲝᲚᲝᲒᲘᲣᲠᲘ ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡᲗᲕᲘᲡ </span>
+        </h1>
+      </div>
+    </header>
     <!-- navigation -->
-    <nav></nav>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </a>
+        <div class="nav-container-links">
+          <a class="nav-link" href="#">მთავარი</a>
+          <a class="nav-link" href="#">TBC IT</a>
+          <a class="nav-link active" href="#">TBC x USAID</a>
+          <a class="nav-link" href="#">რისკები</a>
+        </div>
+      </div>
+    </nav>
     <!-- sidebar -->
     <aside></aside>
     <!-- main content -->
-    <main>
-      <p>testing</p>
+    <main class="main-content">
+      <!-- content goes here -->
+      <section class="container">
+        <h2 class="container-heading">
+          „ TBC x USAID - ტექნოლოგიური განათლებისთვის “ პროგრამა საინფორმაციო
+          ტექნოლოგიებით დაინტერესებულ ადამიანებს გთავაზობთ სრულად დაფინანსებულ
+          ონლაინ საგანმანათლებლო პრაქტიკულ კურსებს სხვადასხვა ICT მიმართულებით.
+          წარმატებულ კურსდამთავრებულებს ეძლევათ შესაძლებლობა დასაქმდნენ თიბისისა
+          და მის პარტნიორ კომპანიებში.
+        </h2>
+        <button class="container-btn">გაიგე მეტი</button>
+      </section>
+      <section class="courses">
+        <h3 class="courses-header">სასწავლო კურსები</h3>
+        <div class="courses-container">
+          <article class="course">
+            <img
+              src="./assets/images/ios.jpg"
+              alt="ios development"
+              class="course-img"
+            />
+            <h4 class="course-header">iOS development</h4>
+            <p class="course-status">რეგისტრაცია დასრულებულია</p>
+            <button class="course-btn"><i></i>კურსის დეტალები</button>
+          </article>
+        </div>
+      </section>
     </main>
     <!-- footer -->
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer-left">
+        <img src="./assets/images/tbc.png" alt="tbc logo" class="footer-logo" />
+        <span class="copyright">
+          &copy;<span class="year">2023</span> ყველა უფლება დაცულია
+        </span>
+        <a href="#" class="rules">წესები და პირობები</a>
+      </div>
+      <div class="footer-right"></div>
+    </footer>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
