@@ -1,10 +1,11 @@
 .nav {
   height: 8.4rem;
-  background-color: #1a1e1f;
+  background-color: $color-bcg-dark;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
 
   &-scrolled {
     background-color: rgba(34, 34, 34, 0.95);

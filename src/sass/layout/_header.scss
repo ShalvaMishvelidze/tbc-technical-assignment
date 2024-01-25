@@ -1,6 +1,5 @@
 .header {
   margin-top: 8.4rem;
-  height: 35.2rem;
   position: relative;
 
   &-bcg {
@@ -9,22 +8,62 @@
     width: 100%;
   }
 
-  &-container {
-    width: clamp(35.2rem, 100%, 100rem);
-    @include centerHV;
-    height: inherit;
+  .ctr {
+    width: 100%;
+    height: 35.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    &-text {
-      position: absolute;
-      top: 50%;
-      left: 1rem;
-      transform: translateY(-59.5%);
-      font-size: 4.2rem;
-      font-family: "TbcFont4";
+    .header-container {
+      width: clamp(35.2rem, 100%, 100rem);
+      height: 35.2rem;
+      margin: 0 auto;
+      z-index: 100;
+      position: relative;
+
+      &-text {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-59.5%);
+        font-size: 4.2rem;
+        font-family: "TbcFont4";
+        line-height: 1.6;
+
+        span {
+          font-size: 3.4rem;
+        }
+      }
+    }
+  }
+
+  &-text {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 5.6rem 3rem 6.3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5.1rem;
+    align-items: flex-start;
+
+    &-heading {
+      font-size: 2.8rem;
+      font-weight: 200;
       line-height: 1.6;
+    }
+    &-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: $color-blue-light;
+      font-family: "TbcFont3";
+      font-weight: 800;
+      transition: color 0.25s ease;
+      cursor: pointer;
 
-      span {
-        font-size: 3.4rem;
+      &:hover {
+        color: $color-gray;
       }
     }
   }
