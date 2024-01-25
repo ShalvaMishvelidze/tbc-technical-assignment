@@ -1,0 +1,74 @@
+.footer {
+  background-color: $color-bcg-dark;
+  padding-top: 2rem;
+  margin-top: 10rem;
+  color: #fff;
+  &-container {
+    padding: 4.55rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.4rem;
+
+    .rules {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.25s ease;
+      margin-top: 0.1rem;
+
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .social-container {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+
+      &-link {
+        img {
+          width: 3.9rem;
+        }
+      }
+    }
+
+    &-email {
+      text-decoration: none;
+      background-color: $color-blue-lighter;
+      color: inherit;
+      padding: 0.7rem 3.17rem 0.75rem;
+      font-size: 1.6rem;
+      border-radius: 0.6rem;
+      font-family: "TbcFont1";
+      position: relative;
+      top: 0.2rem;
+      line-height: 1.5;
+      transition: all 0.25s ease-out;
+
+      &:hover {
+        background-color: $color-gray;
+        color: $color-bcg-dark;
+      }
+    }
+  }
+
+  &-logo {
+    width: 10.6rem;
+    margin-bottom: 0.8rem;
+  }
+}
