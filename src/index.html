@@ -15,6 +15,10 @@
       href="./assets/images/favicon3.png"
       type="image/png"
     />
+    <script
+      src="https://kit.fontawesome.com/54e4caf9bf.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- header -->
@@ -64,7 +68,7 @@
     <main class="main-content">
       <!-- content goes here -->
 
-      <section class="courses">
+      <!-- <section class="courses">
         <h3 class="courses-header">სასწავლო კურსები</h3>
         <div class="courses-container">
           <article class="course">
@@ -78,57 +82,128 @@
             <button class="course-btn"><i></i>კურსის დეტალები</button>
           </article>
         </div>
-      </section>
-      <section class="questions">
-        <div class="questions-header-container">
-          <h3 class="questions-header-container-text">
-            ხშირად დასმული კითხვები
-          </h3>
-          <a href="#" class="questions-header-container-link">ყველა კითხვა</a>
+      </section> -->
+      <section class="slider">
+        <button class="slider-btn-left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="u-container-relative">
+          <h2 class="slider-header">პროექტის პარტნიორები</h2>
+          <div class="slide active">
+            <img src="./assets/images/usaid.png" alt="usaid" /><img
+              src="./assets/images/space-int.png"
+              alt="space int"
+            /><img src="./assets/images/tnet.png" alt="tnet" />
+          </div>
+          <div class="slide">
+            <img src="./assets/images/tegeta.png" alt="tegeta" /><img
+              src="./assets/images/spectre.png"
+              alt="spectre"
+            /><img src="./assets/images/tbc-leasing.png" alt="tbc leasing" />
+          </div>
+          <div class="slide">
+            <img src="./assets/images/ufc.png" alt="ufc" />
+          </div>
         </div>
-        <div class="questions-container">
-          <div class="question-container">
-            <div class="question">
-              <h4>როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?</h4>
-              <i></i>
-            </div>
-            <div class="answer">
-              <p class="answer-heading">
-                კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:
-              </p>
-              <div class="answer-content">
-                <p>
-                  I ეტაპი - პირველ ეტაპზე საჭიროა, შეავსო სასურველი კურსისთვის
-                  განკუთვნილი სარეგისტრაციო ფორმა, რომელიც განთავსებულია კურსის
-                  შიდა გვერდზე. კურსზე რეგისტრაციის დასრულების შემდეგ დაიწყება
-                  შემოსული განცხადებების გადარჩევა.
+        <div class="slider-nav">
+          <button class="slider-nav-dot-big" data-id="0"></button>
+          <button class="slider-nav-dot-small" data-id="1"></button>
+          <button class="slider-nav-dot-big" data-id="2"></button>
+        </div>
+        <button class="slider-btn-right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </section>
+      <!-- questions -->
+      <section class="questions">
+        <div class="u-container">
+          <div class="questions-header-container">
+            <h3 class="questions-header-container-text">
+              ხშირად დასმული კითხვები
+            </h3>
+            <a href="#" class="questions-header-container-link">ყველა კითხვა</a>
+          </div>
+          <div class="questions-container">
+            <div class="question-container">
+              <div class="question">
+                <h4>როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?</h4>
+                <button class="question-btn">
+                  <i class="fa-solid fa-chevron-down show"></i>
+                  <i class="fa-solid fa-chevron-up"></i>
+                </button>
+              </div>
+              <div class="answer">
+                <p class="answer-heading">
+                  კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:
                 </p>
-                <p>
-                  II ეტაპი - შერჩევის მეორე ეტაპი კურსების მიხედვით
-                  განსხვავებულია, ზოგიერთი კურსისთვის მოიცავს პრე-ტესტს, ზოგიერთ
-                  კურსზე კი უნარების ტესტს, სადაც მინიმალური ზღვარის გადალახვის
-                  შემთხვევაში გადახვალ შერჩევის შემდეგ ეტაპზე.
-                </p>
-                <p>
-                  III ეტაპი - მესამე ეტაპი კურსების მიხედვით განსხვავდება:
-                  Advance კურსებზე, სადაც მოითხოვება გარკვეული ტექნიკური ცოდნა,
-                  მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი ცოდნის დონის
-                  შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის წინასწარი
-                  ცოდნა მოთხოვნილი არ არის უნდა შეასრულოთ ტექნიკური დავალება,
-                  რაც თქვენი კვლევისა და თვითსწავლის უნარს ამოწმებს.
-                </p>
-                <p>
-                  IV ეტაპი - შერჩევის ბოლო მეოთხე ეტაპი მოიცავს გასაუბრებას
-                  შესარჩევ კომისიასთან. გასაუბრების წარმატებით გავლის
-                  შემთხვევაში ჩაირიცხებით კურსზე და გაფორმდება შესაბამისი
-                  ხელშეკრულება.
+                <div class="answer-content">
+                  <p>
+                    <span> I ეტაპი </span>- პირველ ეტაპზე საჭიროა, შეავსო
+                    სასურველი კურსისთვის განკუთვნილი სარეგისტრაციო ფორმა,
+                    რომელიც განთავსებულია კურსის შიდა გვერდზე. კურსზე
+                    რეგისტრაციის დასრულების შემდეგ დაიწყება შემოსული
+                    განცხადებების გადარჩევა.
+                  </p>
+                  <p>
+                    <span> II ეტაპი </span>- შერჩევის მეორე ეტაპი კურსების
+                    მიხედვით განსხვავებულია, ზოგიერთი კურსისთვის მოიცავს
+                    პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც
+                    მინიმალური ზღვარის გადალახვის შემთხვევაში გადახვალ შერჩევის
+                    შემდეგ ეტაპზე.
+                  </p>
+                  <p>
+                    <span> III ეტაპი </span>- მესამე ეტაპი კურსების მიხედვით
+                    განსხვავდება: Advance კურსებზე, სადაც მოითხოვება გარკვეული
+                    ტექნიკური ცოდნა, მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი
+                    ცოდნის დონის შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის
+                    წინასწარი ცოდნა მოთხოვნილი არ არის უნდა შეასრულოთ ტექნიკური
+                    დავალება, რაც თქვენი კვლევისა და თვითსწავლის უნარს ამოწმებს.
+                  </p>
+                  <p>
+                    <span> IV ეტაპი </span>- შერჩევის ბოლო მეოთხე ეტაპი მოიცავს
+                    გასაუბრებას შესარჩევ კომისიასთან. გასაუბრების წარმატებით
+                    გავლის შემთხვევაში ჩაირიცხებით კურსზე და გაფორმდება
+                    შესაბამისი ხელშეკრულება.
+                  </p>
+                </div>
+                <p class="answer-heading">
+                  * სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია, ყურადღებით
+                  წაიკითხო კურსის აღწერა, ნახო რას ისწავლი კურსის განმავლობაში
+                  და გაიგო გააჩნია თუ არა კურსს დასწრების წინაპირობა.
                 </p>
               </div>
-              <p class="answer-heading">
-                * სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია, ყურადღებით
-                წაიკითხო კურსის აღწერა, ნახო რას ისწავლი კურსის განმავლობაში და
-                გაიგო გააჩნია თუ არა კურსს დასწრების წინაპირობა.
-              </p>
+            </div>
+            <div class="question-container">
+              <div class="question">
+                <h4>შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?</h4>
+                <button class="question-btn">
+                  <i class="fa-solid fa-chevron-down show"></i
+                  ><i class="fa-solid fa-chevron-up"></i>
+                </button>
+              </div>
+              <div class="answer">
+                <p class="answer-heading">
+                  TBC X USAID ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ
+                  კანდიდატს აქვს მხოლოდ ერთი კურსის გავლის შესაძლებლობა. გარდა
+                  Information Security და Python კურსებისა, სადაც Basic დონის
+                  გავლის შემდეგ შესაძლებელია სწავლის გაგრძელება Advance დონეზე.
+                </p>
+              </div>
+            </div>
+            <div class="question-container">
+              <div class="question">
+                <h4>რა ღირს სწავლა პროგრამის ფარგლებში?</h4>
+                <button class="question-btn">
+                  <i class="fa-solid fa-chevron-down show"></i
+                  ><i class="fa-solid fa-chevron-up"></i>
+                </button>
+              </div>
+              <div class="answer">
+                <p class="answer-heading">
+                  პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია
+                  თიბისი ბანკისა და USAID-ის მიერ.
+                </p>
+              </div>
             </div>
           </div>
         </div>

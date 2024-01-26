@@ -1,31 +1,187 @@
 .main-content {
-  max-width: 100rem;
-  margin: 0 auto;
+  .questions {
+    background-color: #161616;
+    margin: 0 auto;
+    padding: 8.2rem 0;
 
-  .container {
-    padding: 5.6rem 3rem 6.3rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 5.1rem;
-    align-items: flex-start;
-    &-heading {
-      font-size: 2.8rem;
-      font-weight: 200;
-      line-height: 1.6;
-    }
-    &-btn {
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: $color-blue-light;
-      font-family: "TbcFont3";
-      font-weight: 800;
-      transition: color 0.25s ease;
-      cursor: pointer;
+    &-header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.8rem 5rem 1.7rem;
+      font-size: 2.05rem;
+      font-family: "TbcFont1";
+      font-weight: 100;
 
-      &:hover {
-        color: #aaa;
+      &-text {
+        font-family: inherit;
+        font-weight: inherit;
       }
+
+      &-link {
+        font-family: "TbcFont1";
+        color: $color-blue-light;
+        font-weight: 600;
+        margin-right: 0.5rem;
+        font-size: 2rem;
+        letter-spacing: 0.05rem;
+        transition: color 0.35s ease-out;
+
+        &:hover {
+          color: $color-gray;
+        }
+      }
+    }
+
+    .question-container {
+      padding: 2.8rem 0 3rem;
+      padding: 2.8rem 0;
+      margin: 0 5rem;
+      border-bottom: 1px solid #353131;
+
+      .question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        h4 {
+          font-size: 1.8rem;
+          font-family: "TbcFont1";
+          font-weight: 100;
+        }
+
+        &-btn {
+          color: #fff;
+          padding: 0.5rem;
+
+          .fa-chevron-up,
+          .fa-chevron-down {
+            display: none;
+          }
+
+          .show {
+            display: block;
+          }
+        }
+      }
+      .answer {
+        display: none;
+        font-size: 1.4rem;
+        line-height: 2;
+
+        &-heading {
+          padding: 3.2rem 0.2rem 4rem;
+
+          &:last-child {
+            padding-bottom: 0rem;
+          }
+        }
+
+        &-content {
+          padding: 0 1rem 0 2.3rem;
+
+          p {
+            padding: 0.25rem 0;
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .show {
+        display: block;
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+    height: 36.4rem;
+
+    &-header {
+      padding: 4rem 1rem 0;
+      font-family: "TbcFont1";
+      font-weight: 100;
+    }
+
+    &-btn-left {
+      font-size: 4rem;
+      color: inherit;
+      font-weight: 100;
+      position: absolute;
+      left: 8rem;
+      bottom: 11rem;
+      z-index: 10;
+    }
+
+    &-btn-right {
+      font-size: 4rem;
+      color: inherit;
+      font-weight: 100;
+      position: absolute;
+      right: 8rem;
+      bottom: 11rem;
+      z-index: 10;
+    }
+
+    &-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      position: absolute;
+      bottom: 8rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      button {
+        cursor: pointer;
+      }
+
+      &-dot-big {
+        width: 0.67rem;
+        height: 0.6rem;
+        background-color: #f4f4f4;
+        border-radius: 50%;
+      }
+
+      &-dot-small {
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: #f4f4f4;
+        border-radius: 50%;
+      }
+    }
+
+    .slide {
+      display: flex;
+      opacity: 0;
+      width: 100%;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10rem 1rem;
+      transition: all 2s ease-out;
+
+      &:last-child {
+        justify-content: center;
+      }
+
+      img {
+        width: clamp(12rem, 100%, 24rem);
+        height: 7rem;
+        object-fit: contain;
+      }
+    }
+
+    .active {
+      opacity: 1;
     }
   }
 }
