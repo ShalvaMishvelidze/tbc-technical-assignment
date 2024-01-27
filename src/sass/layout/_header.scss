@@ -30,6 +30,11 @@
         font-size: 4.2rem;
         font-family: "TbcFont4";
         line-height: 1.6;
+        transition: padding 0.5s ease-out;
+
+        @include respond(740px) {
+          padding-left: 3rem;
+        }
 
         span {
           font-size: 3.4rem;
@@ -41,11 +46,16 @@
   &-text {
     max-width: 100rem;
     margin: 0 auto;
-    padding: 5.6rem 3rem 6.3rem 1rem;
+    padding: 5rem 3rem 6.5rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 5.1rem;
     align-items: flex-start;
+    transition: padding 0.5s ease-out;
+
+    @include respond(740px) {
+      padding: 5rem 3rem 6.5rem;
+    }
 
     &-heading {
       font-size: 2.8rem;
