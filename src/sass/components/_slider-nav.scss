@@ -20,22 +20,22 @@
   &-dot-big {
     width: 0.67rem;
     height: 0.6rem;
-    background-color: #e4e4e4;
+    background-color: $color-gray-lighter;
     border-radius: 50%;
 
     &.active {
-      background-color: #fff;
+      background-color: $color-white;
     }
   }
 
   &-dot-small {
     width: 0.6rem;
     height: 0.6rem;
-    background-color: #e4e4e4;
+    background-color: $color-gray-lighter;
     border-radius: 50%;
 
     &.active {
-      background-color: #fff;
+      background-color: $color-white;
     }
   }
 }

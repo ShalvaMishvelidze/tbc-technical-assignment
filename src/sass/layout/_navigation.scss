@@ -9,7 +9,7 @@
   transition: all 0.25s ease-out;
 
   &-scrolled {
-    background-color: rgba(34, 34, 34, 0.95);
+    background-color: $color-bcg-dark-transparent;
   }
 
   &-container {
@@ -45,7 +45,7 @@
 
       .nav-link {
         text-decoration: none;
-        color: #f4f4f4;
+        color: $color-font;
         font-size: 1.4rem;
         transition: color 0.25s ease;
         padding: 2.4rem;

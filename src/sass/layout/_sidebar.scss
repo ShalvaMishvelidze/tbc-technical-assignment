@@ -11,7 +11,7 @@
   transition: all 0.3s ease-out;
 
   &.active {
-    background-color: #16151598;
+    background-color: $color-bcg-transparent;
     opacity: 1;
     visibility: visible;
   }
@@ -38,7 +38,7 @@
 
     &-link {
       text-decoration: none;
-      color: #f4f4f4;
+      color: $color-font;
       font-size: 2rem;
       transition: color 0.25s ease;
       text-align: right;
@@ -91,7 +91,7 @@
 
     .sidebar-icon {
       width: 100%;
-      background-color: #fff;
+      background-color: $color-white;
       height: 3px;
       border-radius: 0.15rem;
       transition: all 0.3s ease;
