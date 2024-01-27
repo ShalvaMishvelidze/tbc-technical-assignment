@@ -10,6 +10,16 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(400px) {
+    font-size: 50%;
+  }
+  @include respond(340px) {
+    font-size: 37.5%;
+  }
+  @include respond(250px) {
+    font-size: 25%;
+  }
 }
 
 @font-face {
