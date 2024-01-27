@@ -1,0 +1,83 @@
+.courses {
+  background-color: #161616;
+  padding-bottom: 5.75rem;
+}
+
+.questions {
+  background-color: #161616;
+  margin: 0 auto;
+  padding: 8.4rem 0 8.1rem;
+
+  &-more-bottom {
+    display: none;
+    font-family: "TbcFont3";
+    color: $color-blue-light;
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: 0.037rem;
+    transition: color 0.35s ease-out;
+    text-align: center;
+    padding-top: 7rem;
+
+    @include respond(740px) {
+      display: block;
+    }
+
+    &:hover {
+      color: $color-gray;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  height: 36.3rem;
+  transition: height 0.5s ease-out;
+
+  @include respond(740px) {
+    height: 56.3rem;
+  }
+
+  &-header {
+    padding: 3.6rem 1rem 0;
+    font-family: "TbcFont1";
+    font-weight: 100;
+    transition: all 0.8s ease-out;
+
+    @include respond(740px) {
+      font-size: 3.8rem;
+      padding: 3.6rem 3rem 0;
+    }
+    @include respond(740px) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &-btn-left {
+    font-size: 4rem;
+    color: inherit;
+    font-weight: 100;
+    position: absolute;
+    left: 10rem;
+    bottom: 11rem;
+    z-index: 10;
+
+    @include respond(740px) {
+      display: none;
+    }
+  }
+
+  &-btn-right {
+    font-size: 4rem;
+    color: inherit;
+    font-weight: 100;
+    position: absolute;
+    right: 10rem;
+    bottom: 11rem;
+    z-index: 10;
+
+    @include respond(740px) {
+      display: none;
+    }
+  }
+}

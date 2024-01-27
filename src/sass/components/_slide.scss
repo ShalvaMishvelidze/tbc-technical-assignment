@@ -1,0 +1,43 @@
+.slide {
+  display: flex;
+  opacity: 0;
+  width: 100%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  transition: all 2s ease-out;
+  gap: 3rem;
+
+  @include respond(740px) {
+    flex-direction: column;
+    padding: 3rem;
+    top: 55%;
+  }
+
+  &:last-child {
+    justify-content: center;
+  }
+
+  img {
+    width: 30%;
+    transition: width 0.8s ease-out;
+
+    @include respond(740px) {
+      width: 60%;
+    }
+    @include respond(640px) {
+      width: 70%;
+    }
+    @include respond(540px) {
+      width: 80%;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,41 @@
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include respond(740px) {
+    display: none;
+  }
+
+  .social-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+
+    &-link {
+      img {
+        width: 3.9rem;
+      }
+    }
+  }
+
+  &-email {
+    text-decoration: none;
+    background-color: #00aef3;
+    color: inherit;
+    padding: 0.6rem 3.22rem 0.75rem;
+    font-size: 1.6rem;
+    border-radius: 0.6rem;
+    font-family: "TbcFont1";
+    position: relative;
+    top: 0.3rem;
+    line-height: 1.6;
+    transition: all 0.25s ease-out;
+
+    &:hover {
+      background-color: $color-gray;
+      color: $color-bcg-dark;
+    }
+  }
+}

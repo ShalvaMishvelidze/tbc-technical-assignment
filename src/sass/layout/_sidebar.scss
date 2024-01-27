@@ -46,61 +46,66 @@
       &:hover {
         color: $color-blue;
       }
-    }
-    .active {
-      color: $color-blue;
+      &.active {
+        color: $color-blue;
+      }
     }
   }
-}
+  &-btn {
+    width: 2.6rem;
+    height: 2.1rem;
+    backface-visibility: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    z-index: 2000;
+    position: fixed;
+    right: 3rem;
+    top: 3rem;
 
-.sidebar-btn {
-  width: 2.6rem;
-  height: 2.1rem;
-  backface-visibility: hidden;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 1s ease;
-  z-index: 2000;
-  position: fixed;
-  right: 3rem;
-  top: 3rem;
+    @include respond(740px) {
+      display: flex;
+    }
 
-  @include respond(740px) {
-    display: flex;
-  }
+    &.active {
+      rotate: -45deg;
 
-  &.active {
-    rotate: -45deg;
+      .sidebar-icon {
+        background-color: $color-gray;
+
+        &:first-child {
+          height: 3px;
+          rotate: -90deg;
+          transform: translateX(4px);
+          transform-origin: right;
+        }
+        &:last-child {
+          height: 3px;
+          rotate: -90deg;
+          transform: translateX(-4px);
+          transform-origin: left;
+        }
+      }
+    }
 
     .sidebar-icon {
+      width: 100%;
+      background-color: #fff;
+      height: 3px;
+      border-radius: 0.15rem;
+      transition: all 0.3s ease;
+
       &:first-child {
-        rotate: -90deg;
-        transform: translateX(4px);
-        transform-origin: right;
+        width: 50%;
+        align-self: start;
+        height: 3.5px;
       }
       &:last-child {
-        rotate: -90deg;
-        transform: translateX(-4px);
-        transform-origin: left;
+        height: 2.5px;
+        width: 50%;
+        align-self: end;
       }
-    }
-  }
-
-  .sidebar-icon {
-    width: 100%;
-    background-color: #fff;
-    height: 3px;
-    border-radius: 0.15rem;
-    transition: all 1s ease;
-
-    &:first-child {
-      width: 50%;
-      align-self: start;
-    }
-    &:last-child {
-      width: 50%;
-      align-self: end;
     }
   }
 }

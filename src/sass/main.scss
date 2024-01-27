@@ -1,14 +1,23 @@
 @import "./abstracts/mixins";
 @import "./abstracts/variables";
 
-@import "./base/animations";
 @import "./base/base";
 @import "./base/typography";
 @import "./base/utilities";
 
+@import "./components/course";
+@import "./components/courses-container";
+@import "./components/courses-header";
+@import "./components/footer-left";
+@import "./components/footer-right";
+@import "./components/header-text";
+@import "./components/questions-container";
+@import "./components/questions-header-container";
+@import "./components/slide";
+@import "./components/slider-nav";
+
 @import "./layout/header";
 @import "./layout/navigation";
-@import "./layout/main";
 @import "./layout/footer";
 @import "./layout/sidebar";
 

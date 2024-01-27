@@ -1,0 +1,85 @@
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.4rem;
+
+  @include respond(740px) {
+    width: 100%;
+  }
+
+  &-small-social {
+    display: none;
+
+    @include respond(740px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    .social-container {
+      display: flex;
+      align-items: flex-end;
+      gap: 2rem;
+
+      &-link {
+        img {
+          width: 3.9rem;
+        }
+      }
+    }
+
+    &-email {
+      text-decoration: none;
+      background-color: #00aef3;
+      color: inherit;
+      padding: 0.6rem 3.22rem 0.75rem;
+      font-size: 1.8rem;
+      border-radius: 0.6rem;
+      font-family: "TbcFont1";
+      position: relative;
+      line-height: 1.6;
+      transition: all 0.25s ease-out;
+
+      &:hover {
+        background-color: $color-gray;
+        color: $color-bcg-dark;
+      }
+    }
+  }
+
+  .rules {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s ease;
+    margin-top: 0.1rem;
+
+    @include respond(740px) {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-gray;
+    }
+  }
+  .rules-small {
+    display: none;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s ease;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+
+    @include respond(740px) {
+      display: block;
+    }
+
+    &:hover {
+      color: $color-gray;
+    }
+  }
+
+  .copyright {
+    @include respond(740px) {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  position: absolute;
+  bottom: 8.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.8s ease-out;
+
+  @include respond(740px) {
+    bottom: 2.3rem;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  &-dot-big {
+    width: 0.67rem;
+    height: 0.6rem;
+    background-color: #e4e4e4;
+    border-radius: 50%;
+
+    &.active {
+      background-color: #fff;
+    }
+  }
+
+  &-dot-small {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #e4e4e4;
+    border-radius: 50%;
+
+    &.active {
+      background-color: #fff;
+    }
+  }
+}
