@@ -58,14 +58,41 @@ const data = [
   },
 ];
 
-const questionBtns = document.querySelectorAll(".question");
+const nav = document.querySelector(".nav");
 const slides = document.querySelectorAll(".slide");
 const sliderBtnLeft = document.querySelector(".slider-btn-left");
 const sliderBtnRight = document.querySelector(".slider-btn-right");
 const sliderNavBtns = Array.from(
   document.querySelector(".slider-nav").children
 );
+const questionBtns = document.querySelectorAll(".question");
 const coursesContainer = document.querySelector(".courses-container");
+const sidebarBtn = document.querySelector(".sidebar-btn");
+const sidebar = document.querySelector(".sidebar");
+const sidebarContainer = document.querySelector(".sidebar-container");
+
+sidebar.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  sidebarBtn.classList.remove("active");
+  sidebarContainer.classList.remove("active");
+});
+sidebarContainer.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+sidebarBtn.addEventListener("click", () => {
+  sidebarBtn.classList.toggle("active");
+  sidebar.classList.toggle("active");
+  sidebarContainer.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+  let scrollY = window.scrollY;
+  if (scrollY > 0) {
+    nav.classList.add("nav-scrolled");
+  } else {
+    nav.classList.remove("nav-scrolled");
+  }
+});
 
 coursesContainer.innerHTML = data
   .map((course) => {
@@ -78,7 +105,7 @@ coursesContainer.innerHTML = data
       />
       <p class="course-header">${course.title}</p>
       <p class="course-status">${course.status}</p>
-      <button class="course-btn"><i class="fa-solid fa-arrow-right"></i> კურსის დეტალები</button>
+      <button class="course-btn"><i class="fa-solid fa-arrow-right"></i><span>კურსის დეტალები</span></button>
     </article>
   `;
   })
@@ -95,8 +122,11 @@ const activateSlider = () => {
   const showNextSlide = () => {
     const currentSlide = document.querySelector(".slide.active");
     currentSlide.classList.remove("active");
-    const nextIndex = (slidesArray.indexOf(currentSlide) + 1) % slides.length;
+    const index = slidesArray.indexOf(currentSlide);
+    const nextIndex = (index + 1) % slides.length;
+    sliderNavBtns[index].classList.remove("active");
     setSlide(nextIndex);
+    sliderNavBtns[nextIndex].classList.add("active");
   };
 
   const startSlider = () => {
@@ -114,12 +144,15 @@ const activateSlider = () => {
     const currentSlide = document.querySelector(".slide.active");
     currentSlide.classList.remove("active");
     let index = slidesArray.indexOf(currentSlide);
+    sliderNavBtns[index].classList.remove("active");
 
     if (index === 0) {
       setSlide(slides.length - 1);
+      sliderNavBtns[slides.length - 1].classList.add("active");
     } else {
       const newIndex = index - 1;
       setSlide(newIndex);
+      sliderNavBtns[newIndex].classList.add("active");
     }
     resetSlider();
   });
@@ -131,9 +164,11 @@ const activateSlider = () => {
 
     if (index === slides.length - 1) {
       setSlide(0);
+      sliderNavBtns[0].classList.add("active");
     } else {
       const newIndex = index + 1;
       setSlide(newIndex);
+      sliderNavBtns[newIndex].classList.add("active");
     }
     resetSlider();
   });
@@ -142,7 +177,10 @@ const activateSlider = () => {
     btn.addEventListener("click", (e) => {
       const currentSlide = document.querySelector(".slide.active");
       currentSlide.classList.remove("active");
+      let index = slidesArray.indexOf(currentSlide);
+      sliderNavBtns[index].classList.remove("active");
       setSlide(e.target.dataset.id);
+      sliderNavBtns[e.target.dataset.id].classList.add("active");
       resetSlider();
     });
   });
@@ -161,15 +199,15 @@ const activateQuestions = () => {
           const arrowDown = btn.querySelector(".fa-chevron-down");
           const arrowUp = btn.querySelector(".fa-chevron-up");
 
-          answer.classList.remove("show");
-          arrowDown.classList.add("show");
-          arrowUp.classList.remove("show");
+          answer.classList.remove("shown");
+          arrowDown.classList.add("shown");
+          arrowUp.classList.remove("shown");
         }
       });
 
-      answer.classList.toggle("show");
-      arrowDown.classList.toggle("show");
-      arrowUp.classList.toggle("show");
+      answer.classList.toggle("shown");
+      arrowDown.classList.toggle("shown");
+      arrowUp.classList.toggle("shown");
     });
   });
 };
