@@ -1,5 +1,6 @@
 const nav = document.querySelector(".nav");
 
+// code for making nav transparent when scrolling
 window.addEventListener("scroll", () => {
   let scrollY = window.scrollY;
   if (scrollY > 0) {

@@ -5,6 +5,7 @@ const sliderNavBtns = Array.from(
   document.querySelector(".slider-nav").children
 );
 
+// we need interval id to reset the timer on auto slide change
 let intervalId;
 const slidesArray = Array.from(slides);
 

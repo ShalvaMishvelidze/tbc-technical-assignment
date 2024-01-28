@@ -12,6 +12,7 @@ questionBtns.forEach((questionBtn) => {
         const arrowDown = btn.querySelector(".fa-chevron-down");
         const arrowUp = btn.querySelector(".fa-chevron-up");
 
+        // we need to remove shown class from the current active element
         answer.classList.remove("shown");
         arrowDown.classList.add("shown");
         arrowUp.classList.remove("shown");
