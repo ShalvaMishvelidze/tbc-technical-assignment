@@ -1,6 +1,6 @@
 # TBC Technical Assignment
 
-In this project I have build "TBC x USAID" page of the [TBCAcademy](https://www.tbcacademy.ge/usaid) website
+In this project I have built "TBC x USAID" page of the [TBCAcademy](https://www.tbcacademy.ge/usaid) website
 
 ## Navigation
 
