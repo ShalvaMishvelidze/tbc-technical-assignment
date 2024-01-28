@@ -10,3 +10,10 @@ import "./javascript/sidebar.js";
 import "./javascript/courses.js";
 import "./javascript/slider.js";
 import "./javascript/questions.js";
+
+// code to start the animations after everything is already loaded
+// so that everything doesn't transition in when the page loads and
+// gets displayed immediately
+setTimeout(function () {
+  document.body.className = "";
+}, 500);
